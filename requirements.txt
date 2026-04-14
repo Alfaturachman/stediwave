@@ -1,0 +1,36 @@
+# ============================================================
+# Stetoskop Django Project - Requirements
+# ============================================================
+# Install with: pip install -r requirements.txt
+# For exact versions, run: pip freeze > requirements-exact.txt
+# ============================================================
+
+# Core Framework
+Django>=5.2
+
+# Audio Processing & ML
+librosa>=0.11.0
+soundfile>=0.13.1
+numpy>=2.2.0
+scipy>=1.15.0
+scikit-learn>=1.7.0
+imbalanced-learn>=0.14.0
+
+# Deep Learning (choose one based on your needs)
+tensorflow>=2.20.0
+torch>=2.10.0
+torchvision>=0.25.0
+
+# Firebase Integration
+firebase-admin>=7.4.0
+google-cloud-firestore>=2.27.0
+google-cloud-storage>=3.10.0
+
+# Data Processing
+pandas>=2.3.0
+Pillow>=12.1.0
+
+# Utilities
+requests>=2.32.0
+tqdm>=4.67.0
+joblib>=1.5.0
