@@ -228,20 +228,25 @@
 ### 11. Management Commands
 
 - [ ] **11.1** Create cleanup command
+
     ```bash
     python manage.py cleanup_temp_files
     ```
 
     - Remove old temp audio files
     - Clear expired sessions
+
 - [ ] **11.2** Create backup command
+
     ```bash
     python manage.py backup_firestore
     ```
 
     - Export Firestore data to JSON
     - Schedule with cron job
+
 - [ ] **11.3** Create health check command
+
     ```bash
     python manage.py check_health
     ```
