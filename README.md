@@ -8,29 +8,6 @@ A **Django-based web application** for analyzing respiratory/lung sounds using m
 
 ---
 
-## 📋 Table of Contents
-
-- [Features](#features)
-- [System Architecture](#system-architecture)
-- [Tech Stack](#tech-stack)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Database Setup](#database-setup)
-- [Running the Application](#running-the-application)
-- [Project Structure](#project-structure)
-- [Machine Learning Models](#machine-learning-models)
-- [Audio Analysis Pipeline](#audio-analysis-pipeline)
-- [API Endpoints](#api-endpoints)
-- [Firebase Integration](#firebase-integration)
-- [Deployment](#deployment)
-- [Troubleshooting](#troubleshooting)
-- [Future Enhancements](#future-enhancements)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
 ## ✨ Features
 
 ### Core Functionality
