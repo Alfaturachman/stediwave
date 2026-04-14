@@ -5,11 +5,13 @@ All audio-related routes are organized here.
 from django.urls import path
 from audio import views
 
-app_name = 'audio'
+# Note: No app_name to maintain backward compatibility with existing templates
+# If you want to use namespaces in the future, add: app_name = 'audio'
+# and update all templates to use: {% url 'audio:url_name' %}
 
 urlpatterns = [
     # Dashboard & Authentication
-    path('', views.dashboard, name='dashboard'),
+    path('', views.dashboard, name='beranda'),  # Keep 'beranda' for backward compatibility
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
     
