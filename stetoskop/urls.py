@@ -15,22 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from audio import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.dashboard, name='beranda'),
-    path('login/', views.login_view, name='login'),
-    path('logout/', views.logout_view, name='logout'),
-    path('tambah-pasien/', views.tambah_pasien, name='tambah_pasien'),
-    path('periksa-pasien/', views.upload_audio, name='upload_audio'),
-    path('daftar-pasien/', views.daftar_pasien, name='daftar_pasien'),
-    path('riwayat-pasien/<str:patient_id>/', views.riwayat_pasien, name='riwayat_pasien'),
-    path('riwayat-pasien/delete/<str:exam_id>/', views.delete_riwayat, name='delete_riwayat'),
-    path('analyze_lung_sound_enhanced/', views.analyze_lung_sound_enhanced, name='analyze_lung_sound_enhanced'),
+    path('', include('audio.urls')),  # Include audio app URLs
 ]
 
 if settings.DEBUG:

@@ -12,14 +12,9 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
-import firebase_admin
-from firebase_admin import credentials
 
-# Path ke file serviceAccountKey.json
-cred = credentials.Certificate("serviceAccountKey.json")
-
-# Inisialisasi hanya sekali
-firebase_admin.initialize_app(cred)
+# Firebase is initialized in audio/apps.py when the app is ready
+# This avoids circular imports and ensures proper initialization order
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -110,7 +105,10 @@ ROOT_URLCONF = 'stetoskop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',  # Project-level templates
+            BASE_DIR / 'audio' / 'templates',  # Audio app templates
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
