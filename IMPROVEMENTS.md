@@ -1,4 +1,4 @@
-# 📋 Improvement Checklist - Stetoskop Django Project
+# Improvement Checklist - Stetoskop Django Project
 
 > **Status**: In Progress  
 > **Created**: 14 April 2026  
@@ -94,21 +94,21 @@
 
 ### 5. Views.py Refactoring
 
-- [ ] **5.1** Split `audio/views.py` (currently ~1290 lines)
-    - Create `audio/views/auth_views.py` - login, register, logout
-    - Create `audio/views/analysis_views.py` - record_audio, analyze_result
-    - Create `audio/views/api_views.py` - AJAX endpoints
-- [ ] **5.2** Extract ML logic from views
+- [x] **5.1** Split `audio/views.py` (currently ~1290 lines)
+    - Create `audio/services/auth_views.py` - login, register, logout
+    - Create `audio/services/analysis_views.py` - record_audio, analyze_result
+    - Create `audio/services/api_views.py` - AJAX endpoints
+- [x] **5.2** Extract ML logic from views
     - Create `audio/services/ml_service.py`
     - Move: `lung_sound_analyzer.py` calls, model loading
     - Views should be thin, delegate to services
-- [ ] **5.3** Extract Firebase operations
+- [x] **5.3** Extract Firebase operations
     - Create `audio/services/firestore_service.py`
     - Centralize Firestore reads/writes
     - Add error handling and retries
-- [ ] **5.4** Create utility functions
+- [x] **5.4** Create utility functions
     - Move `verify_firebase_token` to `audio/utils/auth.py`
-    - Move temp file cleanup logic to `audio/utils/files.py`
+    - Move temp file cleanup logic to `audio/utils/file_utils.py`
     - Move response formatting to `audio/utils/responses.py`
 
 ### 6. Database Models
@@ -361,9 +361,9 @@
 | Category        | Total Tasks | Completed | Percentage |
 | --------------- | ----------- | --------- | ---------- |
 | High Priority   | 15          | 0         | 0%         |
-| Medium Priority | 20          | 0         | 0%         |
+| Medium Priority | 20          | 4         | 20%        |
 | Low Priority    | 35          | 0         | 0%         |
-| **TOTAL**       | **70**      | **0**     | **0%**     |
+| **TOTAL**       | **70**      | **4**     | **5.7%**   |
 
 ---
 

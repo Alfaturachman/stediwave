@@ -1,7 +1,5 @@
 from django import forms
-from .models import AudioFile
-from django import forms
-from .models import Pasien
+from .models import AudioFile, Pasien
 
 class AudioForm(forms.ModelForm):
     class Meta:
@@ -11,4 +9,5 @@ class AudioForm(forms.ModelForm):
 class PasienForm(forms.ModelForm):
     class Meta:
         model = Pasien
-        fields = '__all__'
+        fields = ['nama_lengkap', 'tempat_lahir', 'tanggal_lahir', 'tanggal_periksa',
+                  'jenis_kelamin', 'tinggi_badan', 'berat_badan', 'riwayat_penyakit']

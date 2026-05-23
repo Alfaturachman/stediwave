@@ -1,13 +1,11 @@
-import os
-import joblib
-from django.conf import settings
+import logging
 
-GB_MODEL_PATH = os.path.join(settings.BASE_DIR, "ml_model", "trainedGBModel_new.pkl")
+logger = logging.getLogger(__name__)
 
-try:
-    gbModel, classFolders = joblib.load(GB_MODEL_PATH)
-    print("✓ Gradient Boosting model loaded")
-except Exception as e:
-    gbModel = None
-    classFolders = None
-    print(f"✗ Error loading GB model: {e}")
+GB_MODEL_PATH = None
+gbModel = None
+classFolders = None
+
+logger.warning(
+    'ml_model_loader.py is deprecated. ML models are loaded via audio.services.ml_service'
+)

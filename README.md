@@ -8,7 +8,7 @@ A **Django-based web application** for analyzing respiratory/lung sounds using m
 
 ---
 
-## ✨ Features
+## Features
 
 ### Core Functionality
 
@@ -41,7 +41,7 @@ A **Django-based web application** for analyzing respiratory/lung sounds using m
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -76,7 +76,7 @@ A **Django-based web application** for analyzing respiratory/lung sounds using m
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend
 
@@ -106,7 +106,7 @@ A **Django-based web application** for analyzing respiratory/lung sounds using m
 
 ---
 
-## 📦 Prerequisites
+## Prerequisites
 
 Before installation, ensure you have:
 
@@ -118,7 +118,7 @@ Before installation, ensure you have:
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Step 1: Clone the Repository
 
@@ -173,7 +173,7 @@ stetoskop/
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ### Firebase Setup
 
@@ -278,7 +278,7 @@ Firestore Database
 
 ---
 
-## 🏃 Running the Application
+## Running the Application
 
 ### Development Server
 
@@ -306,7 +306,7 @@ gunicorn stetoskop.wsgi:application --bind 0.0.0.0:8000
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 stetoskop/
@@ -358,7 +358,7 @@ stetoskop/
 
 ---
 
-## 🤖 Machine Learning Models
+## Machine Learning Models
 
 ### Primary Model: XGBoost (`xgb_model_optimized_v6.pkl`)
 
@@ -403,7 +403,7 @@ To update the primary model:
 
 ---
 
-## 🔬 Audio Analysis Pipeline
+## Audio Analysis Pipeline
 
 ### 1. Audio Loading
 
@@ -462,7 +462,7 @@ spectrogram_path = generate_spectrogram(y, sr)
 
 ---
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Authentication
 
@@ -490,7 +490,7 @@ _Note: Check `audio/urls.py` and `audio/views.py` for complete endpoint list_
 
 ---
 
-## 🔥 Firebase Integration
+## Firebase Integration
 
 ### Firestore Usage
 
@@ -531,7 +531,7 @@ patients = db.collection('pasien').where('status', '==', 'pending').stream()
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 ### Option 1: Traditional Server (VPS/Dedicated)
 
@@ -625,7 +625,7 @@ sudo certbot --nginx -d audio.qbyte.web.id
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -720,7 +720,7 @@ LOGGING = {
 
 ---
 
-## 🎯 Future Enhancements
+## Future Enhancements
 
 ### Short-term
 
@@ -749,48 +749,16 @@ LOGGING = {
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. **Fork the repository**
-2. **Create a feature branch:**
-    ```bash
-    git checkout -b feature/amazing-feature
-    ```
-3. **Commit your changes:**
-    ```bash
-    git commit -m 'Add amazing feature'
-    ```
-4. **Push to the branch:**
-    ```bash
-    git push origin feature/amazing-feature
-    ```
-5. **Open a Pull Request**
-
-### Code Standards
-
-- Follow PEP 8 style guide
-- Write docstrings for all functions
-- Add tests for new features
-- Update documentation
-
----
-
-## 📝 License
+## License
 
 This project is licensed under the MIT License. See `LICENSE` file for details.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Librosa** for audio processing
 - **XGBoost** for machine learning
 - **Django** for web framework
 - **Firebase** for backend services
 - Medical professionals for domain expertise
-
----
-
-**Last Updated**: Desember 2025

@@ -39,6 +39,8 @@ ENV/
 ml_model/*.pth
 ml_model/*.pt
 ml_model/*.onnx
+ml_model/*.pkl
+ml_model/*.h5
 ml_model/best_model*
 
 # OS
